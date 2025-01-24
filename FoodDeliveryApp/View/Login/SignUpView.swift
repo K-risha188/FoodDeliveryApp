@@ -74,6 +74,28 @@ struct SignUpView: View {
                     }
                     .padding(.trailing,60)
                     
+                    NavigationLink{
+                        EmptyView()
+                    }
+                label:
+                    {
+                        VStack{
+                            Text("Sign Up")
+                                .font(.customfont(.semibold, fontSize: 18))
+                                .foregroundColor(.white)
+                                .frame(minWidth: 0, maxWidth: 350, minHeight: 60,maxHeight: 60 ,alignment: .center)
+                        }
+                        .background(Color.primaryApp)
+                        .cornerRadius(20)
+                    }
+                    .padding(.top,20)
+                    HStack{
+                        Text("Already have an account?")
+                            .font(.customfont(.semibold, fontSize:18))
+                        
+                        Text("Sign In")
+                        
+                    }
                 }
             }
         }
