@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import iPhoneNumberField
 
 struct SignInView: View {
     
@@ -26,7 +27,7 @@ struct SignInView: View {
                     Image("sign_in_top")
                         .resizable()
                         .scaledToFill()
-                        .padding(.bottom,500)
+                        .padding(.bottom,600)
                     
                 }
                 ScrollView{
@@ -36,8 +37,8 @@ struct SignInView: View {
                             .foregroundColor(.black)
                             .multilineTextAlignment(.leading)
                             .padding(.trailing,80)
-                            .padding(.top,100)
-                        HStack(spacing: 12) {
+                            .padding(.top,400)
+                        HStack(spacing: 1) {
                             Button(action: {
                                 showCountryPicker = true
                             }) {
@@ -48,9 +49,10 @@ struct SignInView: View {
                                         .font(.system(size: 18))
                                         .foregroundColor(.black)
                                 }
-                            
+                                
                                 .frame(width: 100)
-                                .padding(.leading, 20)
+                                .padding(.top,1)
+                                .padding(.leading, 2)
                             }
                             .sheet(isPresented: $showCountryPicker) {
                                 NavigationView {
@@ -59,74 +61,108 @@ struct SignInView: View {
                                         .navigationBarTitleDisplayMode(.inline)
                                 }
                             }
-                        Rectangle()
-                                .frame(height: 1)
-                                .foregroundColor(.gray.opacity(0.3))
-                                .padding(.horizontal, 30)
-                                .padding(.bottom, 25)
-
+                            iPhoneNumberField("Enter phone number", text: $phoneNumber)
+                                                       .flagHidden(true)
+                                                       .flagSelectable(false)
+                                                       .formatted(true)
+                                                       .font(UIFont(size: 16, weight: .regular))
+                                               }
+                                               .padding(.top,15)
+                                               .padding(.horizontal, 24)
+                            
                         }
-                
-                            Text("or connect with social media")
-                                .font(.customfont(.medium, fontSize: 15))
-                                .foregroundColor(.black.opacity(0.5))
-                                .padding(.top,350)
-                                .padding()
-                            NavigationLink{
-                                Loginview()
+                    .padding(.top,12)
+                    
+                        NavigationLink{
+                            Loginview()
+                        }
+                    label:
+                        {
+                            HStack{
+                                
+                                Image("google_logo")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .padding(.leading,20)
+                                
+                                Text("Continue with SignIn")
+                                    .font(.customfont(.semibold, fontSize: 18))
+                                    .foregroundColor(.white)
+                                    .frame(minWidth: 0, maxWidth: 250, minHeight: 50, maxHeight: 50)
+                                
+                                
                             }
-                        label:
-                            {
-                                HStack{
-                                    
-                                    Image("google_logo")
-                                        .resizable()
-                                        .frame(width: 20, height: 20)
-                                        .padding(.leading,20)
-                                    
-                                    Text("Continue with SignIn")
-                                        .font(.customfont(.semibold, fontSize: 18))
-                                        .foregroundColor(.white)
-                                        .frame(minWidth: 0, maxWidth: 250, minHeight: 50, maxHeight: 50)
-                                    
-                                    
-                                }
-                                .background(Color(hex: "5383EC"))
-                                .cornerRadius(20)
-                            }.padding()
+                            .background(Color(hex: "5383EC"))
+                            .cornerRadius(20)
+                        }.padding(.top,10)
+                        
+                        
+                        NavigationLink{
+                            EmptyView()
+                        }
+                        label:{
+                            HStack{
+                                
+                                Image("fb_logo")
+                                    .resizable()
+                                    .frame(width: 15, height: 25)
+                                    .padding(.leading,20)
+                                
+                                Text("Continue with SignUp")
+                                    .font(.customfont(.semibold, fontSize: 18))
+                                    .foregroundColor(.white)
+                                    .frame(minWidth: 0, maxWidth: 250, minHeight: 50, maxHeight: 50)
+                            }
+                            .background(Color.primaryApp)
+                            .cornerRadius(20)
+                            .padding(.top,5)
                             
-                            
-                            NavigationLink{
-                                EmptyView()
-                            }
-                            label:{
-                                HStack{
-                                    
-                                    Image("fb_logo")
-                                        .resizable()
-                                        .frame(width: 15, height: 25)
-                                        .padding(.leading,20)
-                                    
-                                    Text("Continue with SignUp")
-                                        .font(.customfont(.semibold, fontSize: 18))
-                                        .foregroundColor(.white)
-                                        .frame(minWidth: 0, maxWidth: 250, minHeight: 50, maxHeight: 50)
-                                }
-                                .background(Color.primaryApp)
-                                .cornerRadius(20)
-                            }
+                        }
+                    Rectangle()
+                        .frame(width:280,height: 1)
+                            .foregroundColor(.gray.opacity(0.3))
+                            .padding(.horizontal, 30)
+                            .padding(.bottom, 25)
+                    
+                    Text("or connect with social media")
+                        .font(.customfont(.medium, fontSize: 15))
+                        .foregroundColor(.black.opacity(0.5))
+                        .padding()
+                    
+                    NavigationLink{
+                        EmptyView()
+                    }
+            
+                    label:{
+                        HStack(spacing: 60){
+                            Image("google")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width:10, height: 50)
+                            Image("facebook")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width:10, height: 50)
+                            Image("apple_logo")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width:10, height: 50)
                         }
                         
                     }
-                    .ignoresSafeArea()
-                    .navigationBarBackButtonHidden(true)
-                    .navigationBarHidden(true)
-                    .navigationTitle("")
+        
+                    }
+                    
                 }
+                .ignoresSafeArea()
+                .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true)
+                .navigationTitle("")
             }
-            
         }
+        
     }
+
 
 #Preview {
     SignInView()

@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3F5414AB2D439E3A00134163 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 3F5414AA2D439E3A00134163 /* iPhoneNumberField */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3F4A80112D3FC9490091842B /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F5414AB2D439E3A00134163 /* iPhoneNumberField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = FoodDeliveryApp;
 			packageProductDependencies = (
+				3F5414AA2D439E3A00134163 /* iPhoneNumberField */,
 			);
 			productName = FoodDeliveryApp;
 			productReference = 3F4A80112D3FC9490091842B /* FoodDeliveryApp.app */;
@@ -107,6 +113,9 @@
 			);
 			mainGroup = 3F4A80082D3FC9490091842B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3F5414A92D439E3A00134163 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3F4A80122D3FC9490091842B /* Products */;
 			projectDirPath = "";
@@ -339,6 +348,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F5414A92D439E3A00134163 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F5414AA2D439E3A00134163 /* iPhoneNumberField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F5414A92D439E3A00134163 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
+			productName = iPhoneNumberField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3F4A80092D3FC9490091842B /* Project object */;
 }
