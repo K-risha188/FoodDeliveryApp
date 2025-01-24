@@ -32,12 +32,13 @@ struct SignInView: View {
                 }
                 ScrollView{
                     VStack{
-                        Text("Get your groceries \n with nectar")
+                        Text("Get your groceries \nwith nectar")
                             .font(.customfont(.semibold, fontSize: 30))
                             .foregroundColor(.black)
                             .multilineTextAlignment(.leading)
                             .padding(.trailing,80)
                             .padding(.top,400)
+
                         HStack(spacing: 1) {
                             Button(action: {
                                 showCountryPicker = true
@@ -71,7 +72,9 @@ struct SignInView: View {
                                                .padding(.horizontal, 24)
                             
                         }
-                    .padding(.top,12)
+                         .padding(.top,12)
+                         .padding(.leading,-20)
+
                     
                         NavigationLink{
                             Loginview()
@@ -80,46 +83,39 @@ struct SignInView: View {
                         {
                             HStack{
                                 
-                                Image("google_logo")
-                                    .resizable()
-                                    .frame(width: 20, height: 20)
-                                    .padding(.leading,20)
-                                
                                 Text("Continue with SignIn")
                                     .font(.customfont(.semibold, fontSize: 18))
                                     .foregroundColor(.white)
-                                    .frame(minWidth: 0, maxWidth: 250, minHeight: 50, maxHeight: 50)
+                                    .frame(minWidth: 0, maxWidth: 350, minHeight: 50, maxHeight: 50)
                                 
                                 
                             }
+                            .padding(.leading,-20)
+                            .padding(.horizontal)
                             .background(Color(hex: "5383EC"))
                             .cornerRadius(20)
                         }.padding(.top,10)
+                       
                         
                         
                         NavigationLink{
-                            EmptyView()
+                            SignUpView()
                         }
                         label:{
                             HStack{
                                 
-                                Image("fb_logo")
-                                    .resizable()
-                                    .frame(width: 15, height: 25)
-                                    .padding(.leading,20)
-                                
                                 Text("Continue with SignUp")
                                     .font(.customfont(.semibold, fontSize: 18))
                                     .foregroundColor(.white)
-                                    .frame(minWidth: 0, maxWidth: 250, minHeight: 50, maxHeight: 50)
+                                    .frame(minWidth: 0, maxWidth: 350, minHeight: 50, maxHeight: 50)
                             }
+                            .padding(.leading,-20)
+                            .padding(.horizontal)
                             .background(Color.primaryApp)
                             .cornerRadius(20)
-                            .padding(.top,5)
-                            
                         }
                     Rectangle()
-                        .frame(width:280,height: 1)
+                        .frame(width:350,height: 1)
                             .foregroundColor(.gray.opacity(0.3))
                             .padding(.horizontal, 30)
                             .padding(.bottom, 25)

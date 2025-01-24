@@ -24,9 +24,9 @@ class MainViewModel: ObservableObject {
         }
         
         #if DEBUG
-        txtUsername = "user4"
-        txtEmail = "youremail@gmail.com"
-        txtPassword = "123456"
+        txtUsername = ""
+        txtEmail = ""
+        txtPassword = ""
         #endif
         
     }
