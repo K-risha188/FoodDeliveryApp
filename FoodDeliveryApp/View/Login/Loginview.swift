@@ -92,8 +92,6 @@ struct Loginview: View {
             }
         }
         .navigationTitle("")
-        .navigationBarBackButtonHidden(true)
-        .navigationBarHidden(true)
         .ignoresSafeArea()
     }
 }

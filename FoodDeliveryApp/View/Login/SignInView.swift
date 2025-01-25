@@ -23,6 +23,7 @@ struct SignInView: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: .screenWidth,height: .screenHeight)
+                    .padding(.bottom,30)
                 VStack{
                     Image("sign_in_top")
                         .resizable()
@@ -151,8 +152,6 @@ struct SignInView: View {
                     
                 }
                 .ignoresSafeArea()
-                .navigationBarBackButtonHidden(true)
-                .navigationBarHidden(true)
                 .navigationTitle("")
             }
         }

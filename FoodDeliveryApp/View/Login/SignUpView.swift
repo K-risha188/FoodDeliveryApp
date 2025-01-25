@@ -14,7 +14,7 @@ struct SignUpView: View {
             Image("bottom_bg")
                 .resizable()
                 .scaledToFill()
-                .padding(.bottom,30)
+                .padding(.bottom,28)
             ScrollView{
                 VStack{
                     Image("color_logo")
@@ -92,13 +92,22 @@ struct SignUpView: View {
                     HStack{
                         Text("Already have an account?")
                             .font(.customfont(.semibold, fontSize:18))
-                        
-                        Text("Sign In")
-                        
+                        NavigationLink{
+                            Loginview()
+                        }
+                        label:{
+                            
+                            
+                            Text("Sign In")
+                                .font(.customfont(.semibold, fontSize:18))
+                                .foregroundColor(.primaryApp)
+                        }
                     }
                 }
             }
         }
+        .navigationTitle("")
+        .ignoresSafeArea()
     }
 }
 
