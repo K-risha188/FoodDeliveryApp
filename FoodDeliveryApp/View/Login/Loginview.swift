@@ -38,7 +38,7 @@ struct Loginview: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 60,height:60)
-                    .padding(.top,65)
+                    .padding(.top,70)
                 Spacer()
                 
                 Text("Loging")
