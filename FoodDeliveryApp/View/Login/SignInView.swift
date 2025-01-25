@@ -18,18 +18,37 @@ struct SignInView: View {
     
     var body: some View {
         NavigationStack{
+            
             ZStack{
+        
                 Image("bottom_bg")
                     .resizable()
                     .scaledToFill()
                     .frame(width: .screenWidth,height: .screenHeight)
                     .padding(.bottom,30)
-                VStack{
-                    Image("sign_in_top")
-                        .resizable()
-                        .scaledToFill()
-                        .padding(.bottom,600)
+               
                     
+               
+                    VStack{
+//                        ZStack{
+                        
+                        Image("sign_in_top")
+                            .resizable()
+                            .scaledToFill()
+                            .padding(.bottom,600)
+                            
+//                            NavigationLink{
+//                                    WelcomeView()
+//                                }
+//                            label:{
+//                                    Image("back")
+//                                        .resizable()
+//                                        .scaledToFit()
+//                                        .frame(width: 80,height:20)
+//                                        .padding(.bottom,750)
+//                                        .padding(.trailing,345)
+//                                }
+//                    }
                 }
                 ScrollView{
                     VStack{

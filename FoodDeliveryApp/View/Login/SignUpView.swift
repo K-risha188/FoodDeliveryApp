@@ -17,11 +17,26 @@ struct SignUpView: View {
                 .padding(.bottom,28)
             ScrollView{
                 VStack{
-                    Image("color_logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width:60,height:60)
-                        .padding(.top,70)
+//                    HStack{
+//                        
+//                        NavigationLink{
+//                            SignInView()
+//                            }
+//                        label:{
+//                            Image("back")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 80,height:20)
+//                                .padding(.trailing,100)
+//                        }
+                        
+                        Image("color_logo")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:60,height:60)
+                            .padding(.top,70)
+                            .padding(.trailing,10)
+//                       }
                     
                     Text("Sign Up")
                         .font(.customfont(.semibold, fontSize: 30))
