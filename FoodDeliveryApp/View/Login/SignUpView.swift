@@ -120,12 +120,12 @@ struct SignUpView: View {
                 }
             }
             .alert(isPresented: $mainVM.showError, content: {
-                       Alert(title: Text(Globs.AppName), message: Text(mainVM.errorMessage) , dismissButton: .default(Text("Ok")))
-                   })
-            }
-            .navigationTitle("")
-            .ignoresSafeArea()
-            
+                Alert(title: Text(Globs.AppName), message: Text(mainVM.errorMessage) , dismissButton: .default(Text("Ok")))
+            })
+        }
+        .navigationTitle("")
+        .ignoresSafeArea()
+        
         
     }
 }

@@ -20,35 +20,35 @@ struct SignInView: View {
         NavigationStack{
             
             ZStack{
-        
+                
                 Image("bottom_bg")
                     .resizable()
                     .scaledToFill()
                     .frame(width: .screenWidth,height: .screenHeight)
                     .padding(.bottom,30)
-               
+                
+                
+                
+                VStack{
+                    //                        ZStack{
                     
-               
-                    VStack{
-//                        ZStack{
-                        
-                        Image("sign_in_top")
-                            .resizable()
-                            .scaledToFill()
-                            .padding(.bottom,600)
-                            
-//                            NavigationLink{
-//                                    WelcomeView()
-//                                }
-//                            label:{
-//                                    Image("back")
-//                                        .resizable()
-//                                        .scaledToFit()
-//                                        .frame(width: 80,height:20)
-//                                        .padding(.bottom,750)
-//                                        .padding(.trailing,345)
-//                                }
-//                    }
+                    Image("sign_in_top")
+                        .resizable()
+                        .scaledToFill()
+                        .padding(.bottom,600)
+                    
+                    //                            NavigationLink{
+                    //                                    WelcomeView()
+                    //                                }
+                    //                            label:{
+                    //                                    Image("back")
+                    //                                        .resizable()
+                    //                                        .scaledToFit()
+                    //                                        .frame(width: 80,height:20)
+                    //                                        .padding(.bottom,750)
+                    //                                        .padding(.trailing,345)
+                    //                                }
+                    //                    }
                 }
                 ScrollView{
                     VStack{
@@ -58,7 +58,7 @@ struct SignInView: View {
                             .multilineTextAlignment(.leading)
                             .padding(.trailing,80)
                             .padding(.top,400)
-
+                        
                         HStack(spacing: 1) {
                             Button(action: {
                                 showCountryPicker = true
@@ -83,62 +83,62 @@ struct SignInView: View {
                                 }
                             }
                             iPhoneNumberField("Enter phone number", text: $phoneNumber)
-                                                       .flagHidden(true)
-                                                       .flagSelectable(false)
-                                                       .formatted(true)
-                                                       .font(UIFont(size: 16, weight: .regular))
-                                               }
-                                               .padding(.top,15)
-                                               .padding(.horizontal, 24)
+                                .flagHidden(true)
+                                .flagSelectable(false)
+                                .formatted(true)
+                                .font(UIFont(size: 16, weight: .regular))
+                        }
+                        .padding(.top,15)
+                        .padding(.horizontal, 24)
+                        
+                    }
+                    .padding(.top,12)
+                    .padding(.leading,-20)
+                    
+                    
+                    NavigationLink{
+                        Loginview()
+                    }
+                label:
+                    {
+                        HStack{
+                            
+                            Text("Continue with SignIn")
+                                .font(.customfont(.semibold, fontSize: 18))
+                                .foregroundColor(.white)
+                                .frame(minWidth: 0, maxWidth: 350, minHeight: 50, maxHeight: 50)
+                            
                             
                         }
-                         .padding(.top,12)
-                         .padding(.leading,-20)
-
+                        .padding(.leading,-20)
+                        .padding(.horizontal)
+                        .background(Color(hex: "5383EC"))
+                        .cornerRadius(20)
+                    }.padding(.top,10)
                     
-                        NavigationLink{
-                            Loginview()
+                    
+                    
+                    NavigationLink{
+                        SignUpView()
+                    }
+                    label:{
+                        HStack{
+                            
+                            Text("Continue with SignUp")
+                                .font(.customfont(.semibold, fontSize: 18))
+                                .foregroundColor(.white)
+                                .frame(minWidth: 0, maxWidth: 350, minHeight: 50, maxHeight: 50)
                         }
-                    label:
-                        {
-                            HStack{
-                                
-                                Text("Continue with SignIn")
-                                    .font(.customfont(.semibold, fontSize: 18))
-                                    .foregroundColor(.white)
-                                    .frame(minWidth: 0, maxWidth: 350, minHeight: 50, maxHeight: 50)
-                                
-                                
-                            }
-                            .padding(.leading,-20)
-                            .padding(.horizontal)
-                            .background(Color(hex: "5383EC"))
-                            .cornerRadius(20)
-                        }.padding(.top,10)
-                       
-                        
-                        
-                        NavigationLink{
-                            SignUpView()
-                        }
-                        label:{
-                            HStack{
-                                
-                                Text("Continue with SignUp")
-                                    .font(.customfont(.semibold, fontSize: 18))
-                                    .foregroundColor(.white)
-                                    .frame(minWidth: 0, maxWidth: 350, minHeight: 50, maxHeight: 50)
-                            }
-                            .padding(.leading,-20)
-                            .padding(.horizontal)
-                            .background(Color.primaryApp)
-                            .cornerRadius(20)
-                        }
+                        .padding(.leading,-20)
+                        .padding(.horizontal)
+                        .background(Color.primaryApp)
+                        .cornerRadius(20)
+                    }
                     Rectangle()
                         .frame(width:350,height: 1)
-                            .foregroundColor(.gray.opacity(0.3))
-                            .padding(.horizontal, 30)
-                            .padding(.bottom, 25)
+                        .foregroundColor(.gray.opacity(0.3))
+                        .padding(.horizontal, 30)
+                        .padding(.bottom, 25)
                     
                     Text("or connect with social media")
                         .font(.customfont(.medium, fontSize: 15))
@@ -148,7 +148,7 @@ struct SignInView: View {
                     NavigationLink{
                         EmptyView()
                     }
-            
+                    
                     label:{
                         HStack(spacing: 60){
                             Image("google")
@@ -166,16 +166,16 @@ struct SignInView: View {
                         }
                         
                     }
-        
-                    }
                     
                 }
-                .ignoresSafeArea()
-                .navigationTitle("")
+                
             }
+            .ignoresSafeArea()
+            .navigationTitle("")
         }
-        
     }
+    
+}
 
 
 #Preview {

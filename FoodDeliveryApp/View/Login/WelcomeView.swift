@@ -26,7 +26,7 @@ struct WelcomeView: View {
                         .scaledToFit()
                         .padding(.bottom)
                     Text("Welcome\n to our store")
-//                        .font(.largeTitle)
+                    //                        .font(.largeTitle)
                         .font(.customfont(.semibold, fontSize: 57))
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
@@ -54,10 +54,10 @@ struct WelcomeView: View {
                     .navigationBarBackButtonHidden(true)
                     .navigationBarHidden(true)
                     .ignoresSafeArea()
-                        
+                    
                     
                 }
-        
+                
                 .padding(.bottom,90)
             }
         }
