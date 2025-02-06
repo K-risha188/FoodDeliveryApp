@@ -55,7 +55,55 @@ struct HomeView: View{
                 .padding(.horizontal,25)
                 
                 ScrollView{
-                    
+                    VStack{
+                        VStack{
+                            Image("banana")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 120)
+                            
+                            Text("Organic Bananas")
+                                .font(.customfont(.semibold, fontSize:18))
+                                .padding(.top,20)
+                                .multilineTextAlignment(.leading)
+                            
+                            Text("7pcs, Priceg")
+                                .font(.customfont(.regular, fontSize:18))
+                                .foregroundColor(.black.opacity(0.4))
+                                .padding(.top,5)
+                                .multilineTextAlignment(.trailing)
+                                .frame(alignment: .leading)
+                            
+                            HStack{
+                                Text("$4.99")
+                                    .font(.customfont(.semibold, fontSize:20))
+                                    .foregroundColor(.black.opacity(0.8))
+                                    .padding(.top,40)
+                             
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .fill(Color.primaryApp)    .frame(width: 50, height: 50)
+                                        .overlay(
+                                            Image("add")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 20, height: 20)
+                                                .foregroundColor(.primaryApp)
+                                        )
+                                        .padding(.leading,50)
+                                        .padding(.top,35)
+                             
+                            }
+                            
+                        }
+                    }
+                    .padding()
+                    .frame(width: 200)
+                    .background(Color.white)
+                    .cornerRadius(15)
+                    .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+                                .padding(.horizontal,5))
                 }
             }
         }
