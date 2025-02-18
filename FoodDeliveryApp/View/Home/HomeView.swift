@@ -79,39 +79,39 @@ struct HomeView: View{
                             }
                         }
                         .padding(.horizontal,25)
-                       
+                        
                         ScrollView(.horizontal, showsIndicators: false){
-                                HStack{
-                                    BestSelling()
-                                }
+                            HStack{
+                                BestSelling()
+                            }
+                            
+                        }
+                        HStack{
+                            Text("Groceries")
+                                .font(.customfont(.semibold, fontSize:25))
+                                .padding(.top,25)
+                                .padding(.trailing,30)
+                            Button{
+                            }
+                            label:{
+                                Text("See all")
+                                    .font(.customfont(.regular, fontSize: 20))
+                                    .foregroundColor(.green)
+                                    .padding(.top,28)
+                                    .padding(.leading,110)
                                 
                             }
+                        }
+                        .padding(.horizontal,25)
+                        
+                        ScrollView(.horizontal, showsIndicators: false){
                             HStack{
-                                Text("Groceries")
-                                    .font(.customfont(.semibold, fontSize:25))
-                                    .padding(.top,25)
-                                    .padding(.trailing,30)
-                                Button{
-                                }
-                                label:{
-                                    Text("See all")
-                                        .font(.customfont(.regular, fontSize: 20))
-                                        .foregroundColor(.green)
-                                        .padding(.top,28)
-                                        .padding(.leading,110)
-                                    
-                                }
-                            }
-                            .padding(.horizontal,25)
-                       
-                            ScrollView(.horizontal, showsIndicators: false){
-                                    HStack{
-                                        groceries()
+                                groceries()
                             }
                         }
-                            ScrollView(.horizontal, showsIndicators: false){
-                                HStack{
-                                    Meat()
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack{
+                                Meat()
                             }
                         }
                     }
